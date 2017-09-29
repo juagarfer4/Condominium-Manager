@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ * converters.xml
+ *
+ * Copyright (C) 2014 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd		
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd		
+	">
+
+	<util:list id="converters">
+		
+		<bean class="converters.AdministratorToStringConverter" />
+		<bean class="converters.StringToAdministratorConverter" />
+		<bean class="converters.AnnouncementToStringConverter" />
+		<bean class="converters.StringToAnnouncementConverter" />
+		<bean class="converters.AuthorityToStringConverter" />
+		<bean class="converters.StringToAuthorityConverter" />
+		<bean class="converters.BlockToStringConverter" />
+		<bean class="converters.StringToBlockConverter" />
+		<bean class="converters.CommunityToStringConverter" />
+		<bean class="converters.StringToCommunityConverter" />
+		<bean class="converters.EmployeeToStringConverter" />
+		<bean class="converters.StringToEmployeeConverter" />
+		<bean class="converters.IncidenceToStringConverter" />
+		<bean class="converters.StringToIncidenceConverter" />
+		<bean class="converters.InvoiceToStringConverter" />
+		<bean class="converters.StringToInvoiceConverter" />
+		<bean class="converters.ManagerToStringConverter" />
+		<bean class="converters.StringToManagerConverter" />
+		<bean class="converters.NeighborsBoardToStringConverter" />
+		<bean class="converters.StringToNeighborsBoardConverter" />
+		<bean class="converters.OwnerToStringConverter" />
+		<bean class="converters.StringToOwnerConverter" />
+		<bean class="converters.PaymentToStringConverter" />
+		<bean class="converters.StringToPaymentConverter" />
+		<bean class="converters.PropertyToStringConverter" />
+		<bean class="converters.StringToPropertyConverter" />
+		<bean class="converters.RenterToStringConverter" />
+		<bean class="converters.StringToRenterConverter" />
+		<bean class="converters.UserAccountToStringConverter" />
+		<bean class="converters.StringToUserAccountConverter" />
+		<bean class="converters.ChargeHistoryToStringConverter" />
+		<bean class="converters.StringToChargeHistoryConverter" />
+		<bean class="converters.ContractToStringConverter" />
+		<bean class="converters.StringToContractConverter" />
+		<bean class="converters.FolderToStringConverter" />
+		<bean class="converters.StringToFolderConverter" />
+		<bean class="converters.MessageToStringConverter" />
+		<bean class="converters.StringToMessageConverter" />
+		<bean class="converters.BudgetHistoryToStringConverter" />
+		<bean class="converters.StringToBudgetHistoryConverter" />
+	</util:list>
+	
+</beans>

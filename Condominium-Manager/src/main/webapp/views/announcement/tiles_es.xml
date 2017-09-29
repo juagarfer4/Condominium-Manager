@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles_es.xml
+ *
+ * Copyright (C) 2013 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+      
+<tiles-definitions>
+
+
+	<definition name="announcement/manager/edit" extends="master.page">
+		<put-attribute name="title" value="Editar un anuncio" />
+		<put-attribute name="body" value="/views/announcement/edit.jsp" />
+	</definition>
+
+	<definition name="announcement/owner/listbyblock" extends="master.page">
+		<put-attribute name="title" value="Lista de anuncios del bloque" />
+		<put-attribute name="body" value="/views/announcement/list.jsp" />
+	</definition>
+	
+	<definition name="announcement/owner/listbycommunity" extends="master.page">
+		<put-attribute name="title" value="Lista de anuncios de la comunidad" />
+		<put-attribute name="body" value="/views/announcement/list.jsp" />
+	</definition>
+	
+	<definition name="announcement/owner/display" extends="master.page">
+		<put-attribute name="title" value="Mostrar anuncio" />
+		<put-attribute name="body" value="/views/announcement/display.jsp" />
+	</definition>
+	
+	<definition name="announcement/manager/listbyblock" extends="master.page">
+		<put-attribute name="title" value="Lista de anuncios del bloque" />
+		<put-attribute name="body" value="/views/announcement/list.jsp" />
+	</definition>
+	
+	<definition name="announcement/manager/listbycommunity" extends="master.page">
+		<put-attribute name="title" value="Lista de anuncios de la comunidad" />
+		<put-attribute name="body" value="/views/announcement/list.jsp" />
+	</definition>
+	
+	<definition name="announcement/manager/display" extends="master.page">
+		<put-attribute name="title" value="Mostrar anuncio" />
+		<put-attribute name="body" value="/views/announcement/display.jsp" />
+	</definition>
+
+</tiles-definitions>

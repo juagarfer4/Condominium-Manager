@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- * tiles.xml * * Copyright (C) 2013 Universidad de Sevilla * * The use 
+	of this project is hereby constrained to the conditions of the * TDG Licence, 
+	a copy of which you may download from * http://www.tdg-seville.info/License.html -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="community/administrator/edit" extends="master.page">
+		<put-attribute name="title" value="Edit a community" />
+		<put-attribute name="body" value="/views/community/edit.jsp" />
+	</definition>
+
+	<definition name="community/administrator/list" extends="master.page">
+		<put-attribute name="title" value="List of communities" />
+		<put-attribute name="body" value="/views/community/list.jsp" />
+	</definition>
+	
+	<definition name="community/manager/list" extends="master.page">
+		<put-attribute name="title" value="List of communities" />
+		<put-attribute name="body" value="/views/community/list.jsp" />
+	</definition>
+	
+	<definition name="community/manager/PDF" extends="master.page">
+		<put-attribute name="title" value="Download report as PDF" />
+		<put-attribute name="body" value="/views/neighborsboard/PDF.jsp" />
+	</definition>
+	
+	<definition name="community/administrator/search" extends="master.page">	
+		<put-attribute name="title" value="List of communities by address" />
+		<put-attribute name="body" value="/views/community/list.jsp" />
+	</definition>
+
+	<definition name="community/manager/search" extends="master.page">	
+		<put-attribute name="title" value="List of communities by address" />
+		<put-attribute name="body" value="/views/community/list.jsp" />
+	</definition>
+
+</tiles-definitions>

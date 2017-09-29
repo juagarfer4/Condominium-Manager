@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles_es.xml
+ *
+ * Copyright (C) 2013 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+      
+<tiles-definitions>
+
+	<definition name="invoice/manager/edit" extends="master.page">
+		<put-attribute name="title" value="Crear una factura" />
+		<put-attribute name="body" value="/views/invoice/edit.jsp" />
+	</definition>
+
+	<definition name="invoice/owner/edit" extends="master.page">
+		<put-attribute name="title" value="Pagar una factura" />
+		<put-attribute name="body" value="/views/invoice/edit.jsp" />
+	</definition>
+	
+	<definition name="invoice/owner/paypal" extends="master.page">
+		<put-attribute name="title" value="Pagar una factura con PayPal" />
+		<put-attribute name="body" value="/views/invoice/paypal.jsp" />
+	</definition>
+
+	<definition name="invoice/owner/list" extends="master.page">
+		<put-attribute name="title" value="Lista de facturas" />
+		<put-attribute name="body" value="/views/invoice/list.jsp" />
+	</definition>
+	
+	<definition name="invoice/owner/success" extends="master.page">
+		<put-attribute name="title" value="Pago realizado con éxito" />
+		<put-attribute name="body" value="/views/invoice/success.jsp" />
+	</definition>
+	
+	<definition name="invoice/owner/failure" extends="master.page">
+		<put-attribute name="title" value="Fallo en el pago" />
+		<put-attribute name="body" value="/views/invoice/failure.jsp" />
+	</definition>
+
+</tiles-definitions>

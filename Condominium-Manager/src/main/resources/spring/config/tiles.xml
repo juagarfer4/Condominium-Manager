@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- * tiles.xml * * Copyright (C) 2014 Universidad de Sevilla * Author (A) 
+	2012 Rafael Corchuelo (corchu@us.es) * * The use of this project is hereby 
+	constrained to the conditions of the * TDG Licence, a copy of which you may 
+	download from * http://www.tdg-seville.info/License.html -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd
+	">
+
+	<util:list id="tiles">
+		<value>/views/master-page/tiles.xml</value>		
+		<value>/views/misc/tiles.xml</value>		
+		<value>/views/security/tiles.xml</value>
+		<value>/views/welcome/tiles.xml</value>
+		<value>/views/privacy/tiles.xml</value>
+		
+		<value>/views/administrator/tiles.xml</value>
+		<value>/views/customer/tiles.xml</value>
+		<value>/views/profile/tiles.xml</value>
+		<value>/views/owner/tiles.xml</value>
+		<value>/views/renter/tiles.xml</value>
+		<value>/views/property/tiles.xml</value>
+		<value>/views/invoice/tiles.xml</value>
+		<value>/views/employee/tiles.xml</value>
+		<value>/views/manager/tiles.xml</value>
+		<value>/views/incidence/tiles.xml</value>
+		<value>/views/announcement/tiles.xml</value>
+		<value>/views/neighborsboard/tiles.xml</value>
+		<value>/views/community/tiles.xml</value>
+		<value>/views/block/tiles.xml</value>
+		<value>/views/payment/tiles.xml</value>
+		<value>/views/contract/tiles.xml</value>
+		<value>/views/chargehistory/tiles.xml</value>
+		<value>/views/folder/tiles.xml</value>
+		<value>/views/message/tiles.xml</value>
+		<value>/views/budgethistory/tiles.xml</value>
+	</util:list>
+
+</beans>

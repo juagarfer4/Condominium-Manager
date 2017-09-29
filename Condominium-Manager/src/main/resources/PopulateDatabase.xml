@@ -1,0 +1,1500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ * PopulateDatabase.xml
+ *
+ * Copyright (C) 2014 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	">
+	
+	<!-- User accounts -->
+
+	<bean id="userAccount1" class="security.UserAccount">
+		<property name="username" value="administrator1" />
+		<property name="password" value="d5cee333abe432891a0de57d0ee38713" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="ADMINISTRATOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount2" class="security.UserAccount">
+		<property name="username" value="administrator2" />
+		<property name="password" value="82954495ff7e2a735ed2192c35b2cd00" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="ADMINISTRATOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccount3" class="security.UserAccount">
+		<property name="username" value="manager1" />
+		<property name="password" value="c240642ddef994358c96da82c0361a58" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="MANAGER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccount4" class="security.UserAccount">
+		<property name="username" value="manager2" />
+		<property name="password" value="8df5127cd164b5bc2d2b78410a7eea0c" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="MANAGER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccount5" class="security.UserAccount">
+		<property name="username" value="owner1" />
+		<property name="password" value="4ef5ba0c918c537fadba2ada54e3dd68" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="OWNER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccount6" class="security.UserAccount">
+		<property name="username" value="owner2" />
+		<property name="password" value="b1e3677cd7c6f633e6c08037583c846f" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="OWNER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccount7" class="security.UserAccount">
+		<property name="username" value="owner3" />
+		<property name="password" value="80a38342307696962140b56a785877ae" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="OWNER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccount10" class="security.UserAccount">
+		<property name="username" value="owner4" />
+		<property name="password" value="b6faad5051326390f43710c2dd66b15e" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="OWNER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccount11" class="security.UserAccount">
+		<property name="username" value="owner5" />
+		<property name="password" value="9486ba2f75d911e8b02f0c6d0f555d43" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="OWNER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccount12" class="security.UserAccount">
+		<property name="username" value="owner6" />
+		<property name="password" value="ca524a7be5b6fb4c6868fefc3b5d8457" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="OWNER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccount13" class="security.UserAccount">
+		<property name="username" value="owner7" />
+		<property name="password" value="2df2986361153a1b9481bc3b66fa4cb7" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="OWNER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccount14" class="security.UserAccount">
+		<property name="username" value="owner8" />
+		<property name="password" value="a6d7313e99ad0a85d712b9d1b1b244d3" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="OWNER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccount8" class="security.UserAccount">
+		<property name="username" value="employee1" />
+		<property name="password" value="03a395eaf1edb673e0f99c7ca8eb156a" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="EMPLOYEE" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccount9" class="security.UserAccount">
+		<property name="username" value="employee2" />
+		<property name="password" value="af74a83ae0d5777401f86af4df941e98" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="EMPLOYEE" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Other domain beans come here -->
+	
+	<!-- Administrator -->
+	
+	<bean id="administrator1" class="domain.Administrator">
+		<property name="name" value="Susana" />
+		<property name="surname" value="López" />
+		<property name="email" value="susanalopez@us.es" />
+		<property name="phone" value="612345678" />
+		<property name="userAccount">
+			<ref bean="userAccount1" />
+		</property>
+	</bean>
+
+	<bean id="administrator2" class="domain.Administrator">
+		<property name="name" value="Francisco" />
+		<property name="surname" value="Molina" />
+		<property name="email" value="franciscomolina@us.es" />
+		<property name="phone" value="623456789" />
+		<property name="userAccount">
+			<ref bean="userAccount2" />
+		</property>
+	</bean>
+	
+	<!-- Manager -->
+	
+	<bean id="manager1" class="domain.Manager">
+		<property name="name" value="Miguel" />
+		<property name="surname" value="Armas" />
+		<property name="email" value="miguelarmas@us.es" />
+		<property name="phone" value="634567890" />
+		<property name="userAccount">
+			<ref bean="userAccount3" />
+		</property>
+	</bean>
+
+	<bean id="manager2" class="domain.Manager">
+		<property name="name" value="Sonia" />
+		<property name="surname" value="Casas" />
+		<property name="email" value="manager2@us.es" />
+		<property name="phone" value="645678901" />
+		<property name="userAccount">
+			<ref bean="userAccount4" />
+		</property>
+	</bean>
+	
+	<!-- Owner -->
+	
+	<bean id="owner1" class="domain.Owner">
+		<property name="name" value="Antonio" />
+		<property name="surname" value="Antóniez" />
+		<property name="email" value="antonioantoniez@us.es" />
+		<property name="phone" value="656789012" />
+		<property name="userAccount">
+			<ref bean="userAccount5" />
+		</property>
+		<property name="properties">
+			<list>
+				<ref bean="property1" />
+			</list>
+		</property>
+		<property name="chargeHistories">
+			<list>
+				<ref bean="chargeHistory1" />
+			</list>
+		</property>
+		<property name="neighborsBoards">
+			<list>
+			</list>
+		</property>
+		<property name="folders">
+			<list>
+				<ref bean="folder1" />
+				<ref bean="folder2" />
+				<ref bean="folder3" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="owner2" class="domain.Owner">
+		<property name="name" value="María" />
+		<property name="surname" value="Sánchez" />
+		<property name="email" value="mariasanchez@us.es" />
+		<property name="phone" value="667890123" />
+		<property name="userAccount">
+			<ref bean="userAccount6" />
+		</property>
+		<property name="properties">
+			<list>
+				<ref bean="property2" />
+			</list>
+		</property>
+		<property name="chargeHistories">
+			<list>
+				<ref bean="chargeHistory2" />
+			</list>
+		</property>
+		<property name="neighborsBoards">
+			<list>
+				<ref bean="neighborsBoard2" />
+			</list>
+		</property>
+		<property name="folders">
+			<list>
+				<ref bean="folder4" />
+				<ref bean="folder5" />
+				<ref bean="folder6" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="owner3" class="domain.Owner">
+		<property name="name" value="Josefa" />
+		<property name="surname" value="Martínez" />
+		<property name="email" value="josefamartinez@us.es" />
+		<property name="phone" value="667890132" />
+		<property name="userAccount">
+			<ref bean="userAccount7" />
+		</property>
+		<property name="properties">
+			<list>
+				<ref bean="property3" />
+			</list>
+		</property>
+		<property name="chargeHistories">
+			<list>
+			</list>
+		</property>
+		<property name="neighborsBoards">
+			<list>
+			</list>
+		</property>
+		<property name="folders">
+			<list>
+				<ref bean="folder7" />
+				<ref bean="folder8" />
+				<ref bean="folder9" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="owner4" class="domain.Owner">
+		<property name="name" value="Sara" />
+		<property name="surname" value="Hernández" />
+		<property name="email" value="sarahernandez@us.es" />
+		<property name="phone" value="656789012" />
+		<property name="userAccount">
+			<ref bean="userAccount10" />
+		</property>
+		<property name="properties">
+			<list>
+				<ref bean="property4" />
+			</list>
+		</property>
+		<property name="chargeHistories">
+			<list>
+			</list>
+		</property>
+		<property name="neighborsBoards">
+			<list>
+			</list>
+		</property>
+		<property name="folders">
+			<list>
+				<ref bean="folder10" />
+				<ref bean="folder11" />
+				<ref bean="folder12" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="owner5" class="domain.Owner">
+		<property name="name" value="Rafael" />
+		<property name="surname" value="Mora" />
+		<property name="email" value="rafaelmora@us.es" />
+		<property name="phone" value="656789011" />
+		<property name="userAccount">
+			<ref bean="userAccount11" />
+		</property>
+		<property name="properties">
+			<list>
+				<ref bean="property5" />
+			</list>
+		</property>
+		<property name="chargeHistories">
+			<list>
+			</list>
+		</property>
+		<property name="neighborsBoards">
+			<list>
+			</list>
+		</property>
+		<property name="folders">
+			<list>
+				<ref bean="folder13" />
+				<ref bean="folder14" />
+				<ref bean="folder15" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="owner6" class="domain.Owner">
+		<property name="name" value="Pedro" />
+		<property name="surname" value="Olla" />
+		<property name="email" value="pedroolla@us.es" />
+		<property name="phone" value="656789013" />
+		<property name="userAccount">
+			<ref bean="userAccount12" />
+		</property>
+		<property name="properties">
+			<list>
+				<ref bean="property6" />
+			</list>
+		</property>
+		<property name="chargeHistories">
+			<list>
+			</list>
+		</property>
+		<property name="neighborsBoards">
+			<list>
+			</list>
+		</property>
+		<property name="folders">
+			<list>
+				<ref bean="folder16" />
+				<ref bean="folder17" />
+				<ref bean="folder18" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="owner7" class="domain.Owner">
+		<property name="name" value="Luisa" />
+		<property name="surname" value="Carrasco" />
+		<property name="email" value="luisacarrasco@us.es" />
+		<property name="phone" value="656789010" />
+		<property name="userAccount">
+			<ref bean="userAccount13" />
+		</property>
+		<property name="properties">
+			<list>
+				<ref bean="property7" />
+			</list>
+		</property>
+		<property name="chargeHistories">
+			<list>
+			</list>
+		</property>
+		<property name="neighborsBoards">
+			<list>
+			</list>
+		</property>
+		<property name="folders">
+			<list>
+				<ref bean="folder19" />
+				<ref bean="folder20" />
+				<ref bean="folder21" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="owner8" class="domain.Owner">
+		<property name="name" value="Jorge" />
+		<property name="surname" value="Costa" />
+		<property name="email" value="jorgecosta@us.es" />
+		<property name="phone" value="656789016" />
+		<property name="userAccount">
+			<ref bean="userAccount14" />
+		</property>
+		<property name="properties">
+			<list>
+				<ref bean="property8" />
+			</list>
+		</property>
+		<property name="chargeHistories">
+			<list>
+			</list>
+		</property>
+		<property name="neighborsBoards">
+			<list>
+			</list>
+		</property>
+		<property name="folders">
+			<list>
+				<ref bean="folder22" />
+				<ref bean="folder23" />
+				<ref bean="folder24" />
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Community -->
+	
+	<bean id="community1" class="domain.Community">
+		<property name="name" value="Atalaya del Arcipreste" />
+		<property name="address" value="Calle del Arciprestre, nº 4, Sevilla, España" />
+		<property name="budget" value="710.0" />
+		<property name="email" value="condominiummanagertfg@gmail.com" />
+		<property name="payments">
+			<list>
+				<ref bean="payment1" />
+				<ref bean="payment3" />
+			</list>
+		</property>
+		<property name="incidences">
+			<list>
+				<ref bean="incidence1" />
+			</list>
+		</property>
+		<property name="announcements">
+			<list>
+			</list>
+		</property>
+		<property name="blocks">
+			<list>
+				<ref bean="block1" />
+				<ref bean="block3" />
+				<ref bean="block5" />
+			</list>
+		</property>
+		<property name="contracts">
+			<list>
+				<ref bean="contract1" />
+			</list>
+		</property>
+		<property name="budgetHistories">
+			<list>
+				<ref bean="budgetHistory1" />
+				<ref bean="budgetHistory2" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="community2" class="domain.Community">
+		<property name="name" value="Rincón del Marqués" />
+		<property name="address" value="Calle del Rato, nº 5, Sevilla, España" />
+		<property name="budget" value="-320.0" />
+		<property name="payments">
+			<list>
+				<ref bean="payment2" />
+				<ref bean="payment4" />
+			</list>
+		</property>
+		<property name="incidences">
+			<list>
+			</list>
+		</property>
+		<property name="announcements">
+			<list>
+				<ref bean="announcement2" />
+			</list>
+		</property>
+		<property name="blocks">
+			<list>
+				<ref bean="block2" />
+				<ref bean="block4" />
+			</list>
+		</property>
+		<property name="contracts">
+			<list>
+				<ref bean="contract2" />
+			</list>
+		</property>
+		<property name="budgetHistories">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Block -->
+	
+	<bean id="block1" class="domain.Block">
+		<property name="number" value="1" />
+		<property name="code" value="Atalaya del Arcipreste-1" />
+		<property name="numberOfFloors" value="10" />
+		<property name="numberOfDoors" value="2" />
+		<property name="community">
+			<ref bean="community1" />
+		</property>
+		<property name="incidences">
+			<list>
+			</list>
+		</property>
+		<property name="announcements">
+			<list>
+				<ref bean="announcement1" />
+			</list>
+		</property>
+		<property name="chargeHistories">
+			<list>
+				<ref bean="chargeHistory1" />
+			</list>
+		</property>
+		<property name="neighborsBoards">
+			<list>
+				<ref bean="neighborsBoard1" />
+			</list>
+		</property>
+		<property name="properties">
+			<list>
+				<ref bean="property1" />
+				<ref bean="property3" />
+				<ref bean="property7" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="block2" class="domain.Block">
+		<property name="number" value="1" />
+		<property name="code" value="Rincón del Marqués-1" />
+		<property name="numberOfFloors" value="20" />
+		<property name="numberOfDoors" value="30" />
+		<property name="community">
+			<ref bean="community2" />
+		</property>
+		<property name="incidences">
+			<list>
+				<ref bean="incidence2" />
+			</list>
+		</property>
+		<property name="announcements">
+			<list>
+			</list>
+		</property>
+		<property name="chargeHistories">
+			<list>
+				<ref bean="chargeHistory2" />
+			</list>
+		</property>
+		<property name="neighborsBoards">
+			<list>
+				<ref bean="neighborsBoard2" />
+			</list>
+		</property>
+		<property name="properties">
+			<list>
+				<ref bean="property2" />
+				<ref bean="property4" />
+				<ref bean="property8" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="block3" class="domain.Block">
+		<property name="number" value="2" />
+		<property name="code" value="Atalaya del Arcipreste-2" />
+		<property name="numberOfFloors" value="10" />
+		<property name="numberOfDoors" value="2" />
+		<property name="community">
+			<ref bean="community1" />
+		</property>
+		<property name="incidences">
+			<list>
+			</list>
+		</property>
+		<property name="announcements">
+			<list>
+			</list>
+		</property>
+		<property name="chargeHistories">
+			<list>
+			</list>
+		</property>
+		<property name="neighborsBoards">
+			<list>
+			</list>
+		</property>
+		<property name="properties">
+			<list>
+				<ref bean="property5" />
+				<ref bean="property6" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="block4" class="domain.Block">
+		<property name="number" value="2" />
+		<property name="code" value="Rincón del Marqués-2" />
+		<property name="numberOfFloors" value="10" />
+		<property name="numberOfDoors" value="2" />
+		<property name="community">
+			<ref bean="community2" />
+		</property>
+		<property name="incidences">
+			<list>
+			</list>
+		</property>
+		<property name="announcements">
+			<list>
+			</list>
+		</property>
+		<property name="chargeHistories">
+			<list>
+			</list>
+		</property>
+		<property name="neighborsBoards">
+			<list>
+			</list>
+		</property>
+		<property name="properties">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="block5" class="domain.Block">
+		<property name="number" value="3" />
+		<property name="code" value="Atalaya del Arcipreste-3" />
+		<property name="numberOfFloors" value="10" />
+		<property name="numberOfDoors" value="2" />
+		<property name="community">
+			<ref bean="community1" />
+		</property>
+		<property name="incidences">
+			<list>
+			</list>
+		</property>
+		<property name="announcements">
+			<list>
+			</list>
+		</property>
+		<property name="chargeHistories">
+			<list>
+			</list>
+		</property>
+		<property name="neighborsBoards">
+			<list>
+			</list>
+		</property>
+		<property name="properties">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Incidence -->
+	
+	<bean id="incidence1" class="domain.Incidence">
+		<property name="name" value="El agua de la piscina está sucia" />
+		<property name="creationMoment" value="01/10/2015" />
+		<property name="description" value="No es posible entrar en la piscina debido a la suciedad del agua" />
+		<property name="status" value="UNREAD" />
+		<property name="community">
+			<ref bean="community1" />
+		</property>
+	</bean>
+	
+	<bean id="incidence2" class="domain.Incidence">
+		<property name="name" value="El ascensor no funciona" />
+		<property name="creationMoment" value="04/10/2014" />
+		<property name="description" value="No es posible utilizar el ascensor" />
+		<property name="status" value="PENDING" />
+		<property name="block">
+			<ref bean="block2" />
+		</property>
+	</bean>
+	
+	<!-- Announcement -->
+	
+	<bean id="announcement1" class="domain.Announcement">
+		<property name="name" value="Cuidado al bajar la basura" />
+		<property name="creationMoment" value="01/10/2015" />
+		<property name="description" value="Se ruega comprobar que las bolsas de basura no goteen" />
+		<property name="block">
+			<ref bean="block1" />
+		</property>
+	</bean>
+	
+	<bean id="announcement2" class="domain.Announcement">
+		<property name="name" value="Vigilar el consumo del agua" />
+		<property name="creationMoment" value="11/11/2014" />
+		<property name="description" value="Se requiere a los propietarios que controlen el gasto excesivo de agua en las propiedades" />
+		<property name="community">
+			<ref bean="community2" />
+		</property>
+	</bean>
+	
+	<!-- Property -->
+	
+	<bean id="property1" class="domain.Property">
+		<property name="floor" value="1" />
+		<property name="door" value="a" />
+		<property name="owner">
+			<ref bean="owner1" />
+		</property>
+		<property name="block">
+			<ref bean="block1" />
+		</property>
+		<property name="invoices">
+			<list>
+				<ref bean="invoice1" />
+			</list>
+		</property>
+		<property name="renters">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="property2" class="domain.Property">
+		<property name="floor" value="2" />
+		<property name="door" value="b" />
+		<property name="owner">
+			<ref bean="owner2" />
+		</property>
+		<property name="block">
+			<ref bean="block2" />
+		</property>
+		<property name="invoices">
+			<list>
+				<ref bean="invoice2" />
+			</list>
+		</property>
+		<property name="renters">
+			<list>
+				<ref bean="renter1" />
+				<ref bean="renter2" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="property3" class="domain.Property">
+		<property name="floor" value="2" />
+		<property name="door" value="a" />
+		<property name="owner">
+			<ref bean="owner3" />
+		</property>
+		<property name="block">
+			<ref bean="block1" />
+		</property>
+		<property name="invoices">
+			<list>
+				<ref bean="invoice3" />
+			</list>
+		</property>
+		<property name="renters">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="property4" class="domain.Property">
+		<property name="floor" value="1" />
+		<property name="door" value="a" />
+		<property name="owner">
+			<ref bean="owner4" />
+		</property>
+		<property name="block">
+			<ref bean="block2" />
+		</property>
+		<property name="invoices">
+			<list>
+				<ref bean="invoice4" />
+			</list>
+		</property>
+		<property name="renters">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="property5" class="domain.Property">
+		<property name="floor" value="2" />
+		<property name="door" value="a" />
+		<property name="owner">
+			<ref bean="owner5" />
+		</property>
+		<property name="block">
+			<ref bean="block3" />
+		</property>
+		<property name="invoices">
+			<list>
+				<ref bean="invoice5" />
+			</list>
+		</property>
+		<property name="renters">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="property6" class="domain.Property">
+		<property name="floor" value="1" />
+		<property name="door" value="a" />
+		<property name="owner">
+			<ref bean="owner6" />
+		</property>
+		<property name="block">
+			<ref bean="block3" />
+		</property>
+		<property name="invoices">
+			<list>
+				<ref bean="invoice6" />
+			</list>
+		</property>
+		<property name="renters">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="property7" class="domain.Property">
+		<property name="floor" value="1" />
+		<property name="door" value="b" />
+		<property name="owner">
+			<ref bean="owner7" />
+		</property>
+		<property name="block">
+			<ref bean="block1" />
+		</property>
+		<property name="invoices">
+			<list>
+				<ref bean="invoice7" />
+			</list>
+		</property>
+		<property name="renters">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="property8" class="domain.Property">
+		<property name="floor" value="1" />
+		<property name="door" value="b" />
+		<property name="owner">
+			<ref bean="owner8" />
+		</property>
+		<property name="block">
+			<ref bean="block2" />
+		</property>
+		<property name="invoices">
+			<list>
+				<ref bean="invoice8" />
+			</list>
+		</property>
+		<property name="renters">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Renter -->
+	
+	<bean id="renter1" class="domain.Renter">
+		<property name="name" value="Jesús" />
+		<property name="surname" value="López" />
+		<property name="email" value="jesuslopez@us.es" />
+		<property name="arrivalDate" value="11/11/2014" />
+		<property name="property">
+			<ref bean="property2" />
+		</property>
+	</bean>
+	
+	<bean id="renter2" class="domain.Renter">
+		<property name="name" value="Ana" />
+		<property name="surname" value="Vidal" />
+		<property name="email" value="anavidal@us.es" />
+		<property name="arrivalDate" value="11/11/2014" />
+		<property name="property">
+			<ref bean="property2" />
+		</property>
+	</bean>
+	
+	<!-- NeighborsBoard -->
+	
+	<bean id="neighborsBoard1" class="domain.NeighborsBoard">
+		<property name="date" value="05/05/2014" />
+		<property name="record" value="Se aprueban las cuentas del bloque en el presente ejercicio" />
+		<property name="block">
+			<ref bean="block1" />
+		</property>
+		<property name="attendants">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="neighborsBoard2" class="domain.NeighborsBoard">
+		<property name="date" value="03/03/2013" />
+		<property name="record" value="Se acuerda suspender la fiesta de la primavera por razones de seguridad" />
+		<property name="block">
+			<ref bean="block2" />
+		</property>
+		<property name="attendants">
+			<list>
+				<ref bean="owner2" />
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Invoice -->
+	
+	<bean id="invoice1" class="domain.Invoice">
+		<property name="creationMoment" value="01/10/2015" />
+		<property name="amount" value="50.0" />
+		<property name="paid" value="false" />
+		<property name="property">
+			<ref bean="property1" />
+		</property>
+	</bean>
+	
+	<bean id="invoice2" class="domain.Invoice">
+		<property name="creationMoment" value="01/10/2015" />
+		<property name="paymentMoment" value="02/20/2015" />
+		<property name="amount" value="500.0" />
+		<property name="paid" value="true" />
+		<property name="property">
+			<ref bean="property2" />
+		</property>
+	</bean>
+	
+	<bean id="invoice3" class="domain.Invoice">
+		<property name="creationMoment" value="01/10/2015" />
+		<property name="paymentMoment" value="02/20/2015" />
+		<property name="amount" value="200.0" />
+		<property name="paid" value="true" />
+		<property name="property">
+			<ref bean="property3" />
+		</property>
+	</bean>
+	
+	<bean id="invoice4" class="domain.Invoice">
+		<property name="creationMoment" value="01/10/2015" />
+		<property name="amount" value="200.0" />
+		<property name="paid" value="false" />
+		<property name="property">
+			<ref bean="property4" />
+		</property>
+	</bean>
+	
+	<bean id="invoice5" class="domain.Invoice">
+		<property name="creationMoment" value="01/10/2015" />
+		<property name="amount" value="180.0" />
+		<property name="paid" value="false" />
+		<property name="property">
+			<ref bean="property5" />
+		</property>
+	</bean>
+	
+	<bean id="invoice6" class="domain.Invoice">
+		<property name="creationMoment" value="01/10/2015" />
+		<property name="amount" value="500.0" />
+		<property name="paid" value="false" />
+		<property name="property">
+			<ref bean="property6" />
+		</property>
+	</bean>
+	
+	<bean id="invoice7" class="domain.Invoice">
+		<property name="creationMoment" value="01/10/2015" />
+		<property name="paymentMoment" value="02/20/2015" />
+		<property name="amount" value="100.0" />
+		<property name="paid" value="true" />
+		<property name="property">
+			<ref bean="property7" />
+		</property>
+	</bean>
+	
+	<bean id="invoice8" class="domain.Invoice">
+		<property name="creationMoment" value="01/10/2015" />
+		<property name="paymentMoment" value="02/20/2015" />
+		<property name="amount" value="300.0" />
+		<property name="paid" value="true" />
+		<property name="property">
+			<ref bean="property8" />
+		</property>
+	</bean>
+	
+	<!-- Employee -->
+	
+	<bean id="employee1" class="domain.Employee">
+		<property name="name" value="Sergio" />
+		<property name="surname" value="Roca" />
+		<property name="email" value="sergioroca@us.es" />
+		<property name="phone" value="678901234" />
+		<property name="userAccount">
+			<ref bean="userAccount7" />
+		</property>
+		<property name="contracts">
+			<list>
+				<ref bean="contract1" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="employee2" class="domain.Employee">
+		<property name="name" value="Alfonso" />
+		<property name="surname" value="Varela" />
+		<property name="email" value="alfonsovarela@us.es" />
+		<property name="phone" value="689012345" />
+		<property name="userAccount">
+			<ref bean="userAccount8" />
+		</property>
+		<property name="contracts">
+			<list>
+				<ref bean="contract2" />
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Contract -->
+	
+	<bean id="contract1" class="domain.Contract">
+		<property name="salary" value="300.0" />
+		<property name="arrivalDate" value="01/10/2013" />
+		<property name="employee">
+			<ref bean="employee1" />
+		</property>
+		<property name="community">
+			<ref bean="community1" />
+		</property>
+	</bean>
+	
+	<bean id="contract2" class="domain.Contract">
+		<property name="salary" value="500.0" />
+		<property name="arrivalDate" value="02/11/2013" />
+		<property name="departureDate" value="02/12/2013" />
+		<property name="employee">
+			<ref bean="employee2" />
+		</property>
+		<property name="community">
+			<ref bean="community2" />
+		</property>
+	</bean>
+	
+	<!-- Payment -->
+	
+	<bean id="payment1" class="domain.Payment">
+		<property name="paymentMoment" value="01/10/2015" />
+		<property name="amount" value="300.0" />
+		<property name="description" value="Reparación de la instalación eléctrica" />
+		<property name="community">
+			<ref bean="community1" />
+		</property>
+	</bean>
+	
+	<bean id="payment2" class="domain.Payment">
+		<property name="paymentMoment" value="01/10/2015" />
+		<property name="amount" value="250.0" />
+		<property name="description" value="Sustitución del sistema de tuberías" />
+		<property name="community">
+			<ref bean="community2" />
+		</property>
+	</bean>
+	
+	<bean id="payment3" class="domain.Payment">
+		<property name="paymentMoment" value="01/10/2015" />
+		<property name="amount" value="80.0" />
+		<property name="description" value="Instalación de la nueva depuradora de la piscina" />
+		<property name="community">
+			<ref bean="community1" />
+		</property>
+	</bean>
+	
+	<bean id="payment4" class="domain.Payment">
+		<property name="paymentMoment" value="01/10/2015" />
+		<property name="amount" value="1100.0" />
+		<property name="description" value="Adaptación del sistema de calefacción a la legislación vigente" />
+		<property name="community">
+			<ref bean="community2" />
+		</property>
+	</bean>
+	
+	<!-- ChargeHistory -->
+	
+	<bean id="chargeHistory1" class="domain.ChargeHistory">
+		<property name="mandateBeginning" value="01/10/2013" />
+		<property name="mandateEnding" value="01/10/2014" />
+		<property name="isPresident" value="true" />
+		<property name="owner">
+			<ref bean="owner1" />
+		</property>
+		<property name="block">
+			<ref bean="block1" />
+		</property>
+	</bean>
+	
+	<bean id="chargeHistory2" class="domain.ChargeHistory">
+		<property name="mandateBeginning" value="01/10/2013" />
+		<property name="mandateEnding" value="01/10/2014" />
+		<property name="isPresident" value="true" />
+		<property name="owner">
+			<ref bean="owner2" />
+		</property>
+		<property name="block">
+			<ref bean="block2" />
+		</property>
+	</bean>
+	
+	<!-- Folder -->
+	
+	<bean id="folder1" class="domain.Folder">
+		<property name="name" value="INBOX" />
+		<property name="owner">
+			<ref bean="owner1" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder2" class="domain.Folder">
+		<property name="name" value="OUTBOX" />
+		<property name="owner">
+			<ref bean="owner1" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder3" class="domain.Folder">
+		<property name="name" value="TRASH" />
+		<property name="owner">
+			<ref bean="owner1" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder4" class="domain.Folder">
+		<property name="name" value="INBOX" />
+		<property name="owner">
+			<ref bean="owner2" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder5" class="domain.Folder">
+		<property name="name" value="OUTBOX" />
+		<property name="owner">
+			<ref bean="owner2" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder6" class="domain.Folder">
+		<property name="name" value="TRASH" />
+		<property name="owner">
+			<ref bean="owner2" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder7" class="domain.Folder">
+		<property name="name" value="INBOX" />
+		<property name="owner">
+			<ref bean="owner3" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder8" class="domain.Folder">
+		<property name="name" value="OUTBOX" />
+		<property name="owner">
+			<ref bean="owner3" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder9" class="domain.Folder">
+		<property name="name" value="TRASH" />
+		<property name="owner">
+			<ref bean="owner3" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder10" class="domain.Folder">
+		<property name="name" value="INBOX" />
+		<property name="owner">
+			<ref bean="owner4" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder11" class="domain.Folder">
+		<property name="name" value="OUTBOX" />
+		<property name="owner">
+			<ref bean="owner4" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder12" class="domain.Folder">
+		<property name="name" value="TRASH" />
+		<property name="owner">
+			<ref bean="owner4" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder13" class="domain.Folder">
+		<property name="name" value="INBOX" />
+		<property name="owner">
+			<ref bean="owner5" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder14" class="domain.Folder">
+		<property name="name" value="OUTBOX" />
+		<property name="owner">
+			<ref bean="owner5" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder15" class="domain.Folder">
+		<property name="name" value="TRASH" />
+		<property name="owner">
+			<ref bean="owner5" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder16" class="domain.Folder">
+		<property name="name" value="INBOX" />
+		<property name="owner">
+			<ref bean="owner6" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder17" class="domain.Folder">
+		<property name="name" value="OUTBOX" />
+		<property name="owner">
+			<ref bean="owner6" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder18" class="domain.Folder">
+		<property name="name" value="TRASH" />
+		<property name="owner">
+			<ref bean="owner6" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder19" class="domain.Folder">
+		<property name="name" value="INBOX" />
+		<property name="owner">
+			<ref bean="owner7" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder20" class="domain.Folder">
+		<property name="name" value="OUTBOX" />
+		<property name="owner">
+			<ref bean="owner7" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder21" class="domain.Folder">
+		<property name="name" value="TRASH" />
+		<property name="owner">
+			<ref bean="owner7" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder22" class="domain.Folder">
+		<property name="name" value="INBOX" />
+		<property name="owner">
+			<ref bean="owner8" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder23" class="domain.Folder">
+		<property name="name" value="OUTBOX" />
+		<property name="owner">
+			<ref bean="owner8" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder24" class="domain.Folder">
+		<property name="name" value="TRASH" />
+		<property name="owner">
+			<ref bean="owner8" />
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Message -->
+	
+	<bean id="message1" class="domain.Message">
+		<property name="moment" value="01/10/2015 14:00" />
+		<property name="subject" value="Olores a gas en el patio" />
+		<property name="body" value="Hola, ¿no has notado cierto olor a gas en el patio?" />
+		<property name="folder">
+			<ref bean="folder2" />
+		</property>
+		<property name="sender">
+			<ref bean="owner1" />
+		</property>
+		<property name="recipient">
+			<ref bean="owner3" />
+		</property>
+	</bean>
+	
+	<bean id="message2" class="domain.Message">
+		<property name="moment" value="01/10/2015 14:00" />
+		<property name="subject" value="Pérdida de móvil" />
+		<property name="body" value="Buenas, no logro localizar mi móvil, ¿es posible que me lo dejase en tu piso en la fiesta de anoche?" />
+		<property name="folder">
+			<ref bean="folder7" />
+		</property>
+		<property name="sender">
+			<ref bean="owner1" />
+		</property>
+		<property name="recipient">
+			<ref bean="owner3" />
+		</property>
+	</bean>
+	
+	<!-- Rent -->
+	
+	<!-- BudgetHistory -->
+	
+	<bean id="budgetHistory1" class="domain.BudgetHistory">
+		<property name="position" value="1" />
+		<property name="initialDate" value="01/1/2015" />
+		<property name="endDate" value="01/2/2015" />
+		<property name="total" value="200.0" />
+		<property name="community">
+			<ref bean="community1" />
+		</property>
+	</bean>
+
+	<bean id="budgetHistory2" class="domain.BudgetHistory">
+		<property name="position" value="2" />
+		<property name="initialDate" value="02/2/2015" />
+		<property name="endDate" value="01/3/2015" />
+		<property name="total" value="205.0" />
+		<property name="community">
+			<ref bean="community1" />
+		</property>
+	</bean>
+
+</beans>
